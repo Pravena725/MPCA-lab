@@ -1,0 +1,11 @@
+.text
+MOV R0,#0x00
+CMP R0,#0
+MOVEQ R1,#1
+BEQ L1
+MOVMI R1,#3
+BMI L1
+MOV R1,#2
+L1:
+SWI 0x11
+.end
